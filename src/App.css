@@ -1,0 +1,149 @@
+.app-shell {
+  min-height: 100svh;
+  background: radial-gradient(circle at top, #0f1912 0%, #030705 55%);
+  color: #9affc8;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background: repeating-linear-gradient(
+    to bottom,
+    #00ff88 0,
+    #00ff88 1px,
+    transparent 2px,
+    transparent 6px
+  );
+}
+
+.panel {
+  width: min(1080px, 100%);
+  border: 1px solid #11a76f;
+  background: rgba(3, 20, 10, 0.8);
+  backdrop-filter: blur(5px);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 0 24px rgba(0, 255, 136, 0.2);
+}
+
+.terminal-label {
+  margin: 0;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #43ffae;
+  font-size: 0.8rem;
+}
+
+h1,
+h2 {
+  color: #dbffe9;
+  margin: 8px 0;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #7be8b6;
+}
+
+.upload-zone {
+  margin-top: 20px;
+  border: 1px dashed #2be391;
+  padding: 18px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.upload-title {
+  color: #dbffe9;
+  font-weight: 700;
+}
+
+.upload-note {
+  font-size: 0.9rem;
+  color: #77cfa4;
+}
+
+.upload-zone input {
+  margin-top: 8px;
+  color: #9affc8;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.preview-card,
+.data-card {
+  background: #07150d;
+  border: 1px solid #165636;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.preview-card img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #1f6f46;
+  margin-top: 8px;
+}
+
+.placeholder,
+.loading {
+  color: #77cfa4;
+}
+
+.error {
+  color: #ff7b7b;
+  margin: 12px 0 0;
+}
+
+.data-card dl {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 8px;
+  border-bottom: 1px solid rgba(43, 227, 145, 0.16);
+  padding-bottom: 8px;
+}
+
+.row dt {
+  color: #9ef3c8;
+}
+
+.row dd {
+  margin: 0;
+  color: #e6fff1;
+  word-break: break-word;
+}
+
+.row a {
+  color: #53ffb6;
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
