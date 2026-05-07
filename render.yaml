@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: view-meta-data-photos-api
+    env: node
+    plan: free
+    rootDir: .
+    buildCommand: npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PORT
+        value: "8787"
+      - key: ALLOWED_ORIGINS
+        value: "https://sergiioestevee.github.io"

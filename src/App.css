@@ -47,6 +47,11 @@ h2 {
   margin: 8px 0;
 }
 
+h3 {
+  margin: 16px 0 8px;
+  color: #cbffdf;
+}
+
 .subtitle {
   margin-top: 0;
   color: #7be8b6;
@@ -61,6 +66,12 @@ h2 {
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.upload-zone.dragging {
+  border-color: #53ffb6;
+  box-shadow: 0 0 0 2px rgba(83, 255, 182, 0.25);
 }
 
 .upload-title {
@@ -110,6 +121,25 @@ h2 {
   margin: 12px 0 0;
 }
 
+.actions {
+  margin-top: 12px;
+}
+
+.action-btn {
+  background: #0a2b1a;
+  color: #aaffcf;
+  border: 1px solid #2be391;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .data-card dl {
   margin: 0;
   display: grid;
@@ -136,6 +166,36 @@ h2 {
 
 .row a {
   color: #53ffb6;
+}
+
+.diagnostic {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(43, 227, 145, 0.24);
+}
+
+.diagnostic ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.ai-note {
+  color: #77cfa4;
+  margin-bottom: 8px;
+}
+
+.ai-result {
+  margin-top: 12px;
+  background: #04120b;
+  border: 1px solid #1a5638;
+  border-radius: 8px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.ai-result ul {
+  margin: 8px 0;
+  padding-left: 18px;
 }
 
 @media (max-width: 900px) {
